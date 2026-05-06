@@ -3,17 +3,16 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX gpt: <http://www.ontotext.com/gpt/>
 PREFIX ex: <http://www.example.com/>
 
-# Query 2 - Controlled semantic enrichment
 INSERT {
     GRAPH ex:llm-outputs-q2 {
         ?film ex:theme ?theme .
         << ?film ex:theme ?theme >> ex:reason ?reason .
-        ?theme rdfs:label ?themeLabel .
+        ?theme a ex:Theme ;
+            rdfs:label ?themeLabel .
     }
 }
 WHERE {
     {
-        # Retrieve all the films from the dataset
         SELECT ?film ?title ?filmContext WHERE {
             ?film a voc:Film ;
                 rdfs:label ?title .
@@ -23,7 +22,6 @@ WHERE {
             FILTER(LANG(?title) = "") # Make things simple: Keep only the "default" titles
         }
     }
-
     # Build the prompt
     BIND(
         CONCAT(
@@ -39,7 +37,6 @@ WHERE {
     (?pickedId ?reason) gpt:table (?prompt 0.2)
     FILTER(UCASE(STR(?pickedId)) != "NONE")
 
-    # Create the theme instances
     VALUES (?theme ?themeId ?themeLabel) {
         (ex:EmpireVsRebellion 	"EmpireVsRebellion" 	"Empire vs Rebellion")
         (ex:Redemption         	"Redemption"         	"Redemption")
