@@ -49,9 +49,9 @@
 @prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
-<http://www.example.com/llm-outputs-q3> {
-  <https://swapi.co/resource/human/5> voc:wikidataLink wd:Q15787 .
+<http://www.example.com/q3-reconciliation-output> {
+  <https://swapi.co/resource/human/5> voc:wikidataLink wd:Q51797 .
   
-  <<<https://swapi.co/resource/human/5> voc:wikidataLink wd:Q15787>> <http://www.example.com/reason>
-      "Clearly the main Star Wars character Leia Organa." .
+  <<<https://swapi.co/resource/human/5> voc:wikidataLink wd:Q51797>> <http://www.example.com/reason>
+      "Clearly refers to the same Star Wars character." .
 }
