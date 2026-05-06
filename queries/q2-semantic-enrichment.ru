@@ -25,11 +25,11 @@ WHERE {
     # Build the prompt
     BIND(
         CONCAT(
-                  "You are enriching a Star Wars film knowledge graph. For the film '", STR(?title), "', choose up to 2 theme IDs.",
-                  "Allowed theme IDs only: EmpireVsRebellion, Redemption, Mentorship, Destiny, Betrayal, PoliticalIntrigue, FoundFamily, Survival.",
-                  "Available film context: ", ?filmContext,
-                  "Return up to 2 rows with exactly 2 columns: theme-ID, short reason.",
-                  "If nothing fits, return one row: NONE, no-fit."
+                  "You are enriching a Star Wars film knowledge graph. For the film '", STR(?title), "', choose up to 2 theme IDs. ",
+                  "Allowed theme IDs only: EmpireVsRebellion, Redemption, Mentorship, Destiny, Betrayal, PoliticalIntrigue, FoundFamily, Survival. ",
+                  "Available film context: ", COALESCE(STR(?filmContext), ""), " ",
+                  "Return up to 2 rows with exactly 2 columns: theme-ID, short reason. ",
+                  "If nothing fits, return one row: NONE, no-fit. "
               ) AS ?prompt
     )
 

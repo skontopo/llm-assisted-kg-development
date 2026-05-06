@@ -32,7 +32,7 @@ WHERE {
     # Build the candidate list from the local Wikidata slice
     {
         SELECT (helper:tupleAggr(?row) AS ?candidates) WHERE {
-            GRAPH <ex:wikidata-starwars> {
+            GRAPH ex:wikidata-slice {
                 VALUES ?cand {
                     wd:Q51797		# Princess Leia
                     wd:Q15136385	# Princess Leia's bikini
