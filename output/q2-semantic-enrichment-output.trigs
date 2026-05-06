@@ -1,0 +1,133 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix data: <https://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix schema: <http://schema.org/> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix voc: <https://swapi.co/vocabulary/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix commons: <https://commons.wikimedia.org/wiki/Special:FilePath/> .
+@prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://www.example.com/llm-outputs-q2> {
+  <http://www.example.com/PoliticalIntrigue> a <http://www.example.com/Theme>;
+    rdfs:label "Political Intrigue" .
+  
+  <http://www.example.com/Mentorship> a <http://www.example.com/Theme>;
+    rdfs:label "Mentorship" .
+  
+  <http://www.example.com/Betrayal> a <http://www.example.com/Theme>;
+    rdfs:label "Betrayal" .
+  
+  <http://www.example.com/EmpireVsRebellion> a <http://www.example.com/Theme>;
+    rdfs:label "Empire vs Rebellion" .
+  
+  <http://www.example.com/Survival> a <http://www.example.com/Theme>;
+    rdfs:label "Survival" .
+  
+  <http://www.example.com/Redemption> a <http://www.example.com/Theme>;
+    rdfs:label "Redemption" .
+  
+  <https://swapi.co/resource/film/4> <http://www.example.com/theme> <http://www.example.com/PoliticalIntrigue>,
+      <http://www.example.com/Mentorship> .
+  
+  <https://swapi.co/resource/film/5> <http://www.example.com/theme> <http://www.example.com/PoliticalIntrigue>,
+      <http://www.example.com/Betrayal> .
+  
+  <https://swapi.co/resource/film/6> <http://www.example.com/theme> <http://www.example.com/PoliticalIntrigue>,
+      <http://www.example.com/Betrayal> .
+  
+  <https://swapi.co/resource/film/2> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>,
+      <http://www.example.com/Survival> .
+  
+  <https://swapi.co/resource/film/3> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>,
+      <http://www.example.com/Redemption> .
+  
+  <https://swapi.co/resource/film/1> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>,
+      <http://www.example.com/Survival> .
+  
+  <https://swapi.co/resource/film/7> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>,
+      <http://www.example.com/Survival> .
+  
+  <<<https://swapi.co/resource/film/4> <http://www.example.com/theme> <http://www.example.com/PoliticalIntrigue>>>
+    <http://www.example.com/reason> "The film centers on political maneuvering, trade disputes, and secret agendas." .
+  
+  <<<https://swapi.co/resource/film/4> <http://www.example.com/theme> <http://www.example.com/Mentorship>>>
+    <http://www.example.com/reason> "The relationship between Jedi Master Qui-Gon Jinn and his apprentice Obi-Wan Kenobi is central." .
+  
+  <<<https://swapi.co/resource/film/5> <http://www.example.com/theme> <http://www.example.com/PoliticalIntrigue>>>
+    <http://www.example.com/reason> "The film centers on Senate debates, separatist movements, and manipulation behind the scenes." .
+  
+  <<<https://swapi.co/resource/film/5> <http://www.example.com/theme> <http://www.example.com/Betrayal>>>
+    <http://www.example.com/reason> "Count Dooku's actions and the creation of the clone army involve deception and hidden agendas." .
+  
+  <<<https://swapi.co/resource/film/6> <http://www.example.com/theme> <http://www.example.com/Betrayal>>>
+    <http://www.example.com/reason> "The film centers on Anakin's betrayal of the Jedi and the Republic." .
+  
+  <<<https://swapi.co/resource/film/6> <http://www.example.com/theme> <http://www.example.com/PoliticalIntrigue>>>
+    <http://www.example.com/reason> "The kidnapping of Palpatine and the Republic's collapse highlight intrigue." .
+  
+  <<<https://swapi.co/resource/film/2> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>>>
+    <http://www.example.com/reason> "The film centers on the ongoing conflict between the Empire and the Rebellion." .
+  
+  <<<https://swapi.co/resource/film/2> <http://www.example.com/theme> <http://www.example.com/Survival>>>
+    <http://www.example.com/reason> "The Rebels struggle to survive after being driven from their base by the Empire." .
+  
+  <<<https://swapi.co/resource/film/3> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>>>
+    <http://www.example.com/reason> "The film centers on the struggle between the Rebel Alliance and the Empire." .
+  
+  <<<https://swapi.co/resource/film/3> <http://www.example.com/theme> <http://www.example.com/Redemption>>>
+    <http://www.example.com/reason> "Key characters, especially Darth Vader, face opportunities for redemption." .
+  
+  <<<https://swapi.co/resource/film/1> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>>>
+    <http://www.example.com/reason> "The film centers on the conflict between the oppressive Empire and the Rebels." .
+  
+  <<<https://swapi.co/resource/film/1> <http://www.example.com/theme> <http://www.example.com/Survival>>>
+    <http://www.example.com/reason> "The Rebels fight to survive against the Empire's overwhelming power." .
+  
+  <<<https://swapi.co/resource/film/7> <http://www.example.com/theme> <http://www.example.com/EmpireVsRebellion>>>
+    <http://www.example.com/reason> "The First Order (successor to the Empire) opposes the Resistance and Republic." .
+  
+  <<<https://swapi.co/resource/film/7> <http://www.example.com/theme> <http://www.example.com/Survival>>>
+    <http://www.example.com/reason> "The Resistance struggles to survive against the rising threat of the First Order." .
+}

@@ -1,0 +1,57 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix data: <https://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix schema: <http://schema.org/> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix voc: <https://swapi.co/vocabulary/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix commons: <https://commons.wikimedia.org/wiki/Special:FilePath/> .
+@prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://www.example.com/llm-outputs-q3> {
+  <https://swapi.co/resource/human/5> voc:wikidataLink wd:Q15787 .
+  
+  <<<https://swapi.co/resource/human/5> voc:wikidataLink wd:Q15787>> <http://www.example.com/reason>
+      "Clearly the main Star Wars character Leia Organa." .
+}

@@ -4,7 +4,7 @@ PREFIX gpt: <http://www.ontotext.com/gpt/>
 PREFIX ex: <http://www.example.com/>
 
 INSERT {
-    GRAPH ex:llm-outputs-q2 {
+    GRAPH ex:q2-semantic-enrichment-output {
         ?film ex:theme ?theme .
         << ?film ex:theme ?theme >> ex:reason ?reason .
         ?theme a ex:Theme ;

@@ -1,0 +1,716 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix data: <https://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix schema: <http://schema.org/> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix voc: <https://swapi.co/vocabulary/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix commons: <https://commons.wikimedia.org/wiki/Special:FilePath/> .
+@prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://www.example.com/llm-outputs-q1> {
+  <https://swapi.co/resource/aleena/47> skos:altLabel "Tyerell", "Ratts", "Tyerell the Aleenan" .
+  
+  voc:Aleena skos:altLabel "Aleenian", "Aleen", "Aleena species" .
+  
+  <https://swapi.co/resource/film/4> skos:altLabel "TPM", "Episode I", "Phantom Menace" .
+  
+  <https://swapi.co/resource/planet/38> skos:altLabel "Aleen Moon", "Aleen's Minor",
+      "Minor Aleen" .
+  
+  <https://swapi.co/resource/besalisk/71> skos:altLabel "Dex", "Jettster", "Dexter" .
+  
+  voc:Besalisk skos:altLabel "Besalisks", "Four-Armed Alien", "Besaliskian" .
+  
+  <https://swapi.co/resource/film/5> skos:altLabel "Episode II", "AOTC" .
+  
+  <https://swapi.co/resource/planet/55> skos:altLabel "Ojom Prime", "Ojom World", "Ojom System" .
+  
+  <https://swapi.co/resource/cerean/52> skos:altLabel "Mundi", "Ki-Adi", "Master Mundi" .
+  
+  voc:Cerean skos:altLabel "Cereans", "Cerean species", "Cerea natives" .
+  
+  <https://swapi.co/resource/film/6> skos:altLabel "Episode III", "RotS" .
+  
+  <https://swapi.co/resource/planet/43> skos:altLabel "Cerea Prime", "Cerean Homeworld",
+      "Planet Cerea" .
+  
+  <https://swapi.co/resource/chagrian/59> skos:altLabel "Vice Chair Amedda", "Grand Vizier Amedda",
+      "Amedda" .
+  
+  voc:Chagrian skos:altLabel "Chagrians", "Chagrian species", "Chagrianite" .
+  
+  <https://swapi.co/resource/planet/50> skos:altLabel "Champalan", "Champa", "Champali" .
+  
+  <https://swapi.co/resource/clawdite/70> skos:altLabel "Zam", "Wesell", "Clawdite Assassin" .
+  
+  voc:Clawdite skos:altLabel "Clawdites", "Shapeshifter", "Zolanian" .
+  
+  <https://swapi.co/resource/planet/54> skos:altLabel "Zolani", "Zolans", "Zol" .
+  
+  <https://swapi.co/resource/vehicle/45> skos:altLabel "Koro-2 airspeeder", "Exodrive speeder",
+      "Koro-2" .
+  
+  <https://swapi.co/resource/droid/23> skos:altLabel "IG-88A", "IG Assassin Droid",
+      "IG-Series" .
+  
+  voc:Droid skos:altLabel "Bot", "Automaton", "Mech" .
+  
+  <https://swapi.co/resource/film/2> skos:altLabel "ESB", "Empire Strikes Back", "Episode V" .
+  
+  <https://swapi.co/resource/planet/28> skos:altLabel "Mysterious World", "Uncharted Planet",
+      "Unidentified Planet" .
+  
+  <https://swapi.co/resource/droid/2> skos:altLabel "Threepio", "C3PO", "3PO" .
+  
+  <https://swapi.co/resource/film/3> skos:altLabel "ROTJ", "Episode VI", "Jedi" .
+  
+  <https://swapi.co/resource/film/1> skos:altLabel "ANH", "Episode IV", "Star Wars 1977" .
+  
+  <https://swapi.co/resource/planet/1> skos:altLabel "Tato", "Twin Suns", "Tatooine Desert" .
+  
+  <https://swapi.co/resource/droid/3> skos:altLabel "Artoo", "R2", "Artoo-Detoo" .
+  
+  <https://swapi.co/resource/film/7> skos:altLabel "Episode VII", "TFA", "Star Wars 7" .
+  
+  <https://swapi.co/resource/planet/8> skos:altLabel "Naboo System", "Naboo Planet",
+      "Theed World" .
+  
+  <https://swapi.co/resource/droid/75> skos:altLabel "R4", "R4P17", "Red Astromech" .
+  
+  <https://swapi.co/resource/droid/87> skos:altLabel "BB-8", "BB Unit", "Ball Droid" .
+  
+  <https://swapi.co/resource/droid/8> skos:altLabel "Red", "R5", "Red Droid" .
+  
+  <https://swapi.co/resource/dug/41> skos:altLabel "Seb", "Dug Racer", "Bulba" .
+  
+  voc:Dug skos:altLabel "Dugs", "Dug species", "Dugite" .
+  
+  <https://swapi.co/resource/planet/35> skos:altLabel "Malastare System", "Malastare Planet",
+      "Malastarian" .
+  
+  <https://swapi.co/resource/ewok/30> skos:altLabel "Wicket Warrick", "Wicket", "Warrick" .
+  
+  voc:Ewok skos:altLabel "Ewoks", "Forest dwellers", "Endor natives" .
+  
+  <https://swapi.co/resource/planet/7> skos:altLabel "Forest Moon", "Sanctuary Moon",
+      "Moon of Endor" .
+  
+  <https://swapi.co/resource/wookiee/13> skos:altLabel "Wookiee", "Chewie", "Chewbacca the Wookiee" .
+  
+  <https://swapi.co/resource/rodian/15> skos:altLabel "Greedo the Younger", "Rodian Bounty Hunter",
+      "Gree" .
+  
+  <https://swapi.co/resource/human/10> skos:altLabel "Ben Kenobi", "Obi-Wan", "Kenobi" .
+  
+  <https://swapi.co/resource/human/5> skos:altLabel "Princess Leia", "Leia", "General Organa" .
+  
+  <https://swapi.co/resource/human/4> skos:altLabel "Lord Vader", "The Dark Lord", "Vader" .
+  
+  <https://swapi.co/resource/human/12> skos:altLabel "Grand Moff Tarkin", "Governor Tarkin",
+      "Tarkin" .
+  
+  <https://swapi.co/resource/human/9> skos:altLabel "Biggs", "Darklighter", "Captain Darklighter" .
+  
+  <https://swapi.co/resource/human/7> skos:altLabel "Beru Lars", "Aunt Beru", "Beru Whitesun" .
+  
+  <https://swapi.co/resource/human/1> skos:altLabel "Luke", "Commander Skywalker", "Red Five" .
+  
+  <https://swapi.co/resource/human/6> skos:altLabel "Uncle Owen", "Owen", "Lars" .
+  
+  <https://swapi.co/resource/human/14> skos:altLabel "Captain Solo", "Solo", "Han" .
+  
+  <https://swapi.co/resource/hutt/16> skos:altLabel "Jabba the Hutt", "Jabba", "Jabba Desilijic" .
+  
+  <https://swapi.co/resource/human/19> skos:altLabel "Porkins", "Red Six", "Jek" .
+  
+  <https://swapi.co/resource/human/18> skos:altLabel "Red Two", "Rogue Three", "Wedge" .
+  
+  <https://swapi.co/resource/human/81> skos:altLabel "Captain Antilles", "R. Antilles",
+      "Antilles" .
+  
+  <https://swapi.co/resource/planet/2> skos:altLabel "Aldera", "Alderaanian Homeworld",
+      "The Peaceful Planet" .
+  
+  <https://swapi.co/resource/planet/3> skos:altLabel "Yavin 4", "Yavin", "The Fourth Moon of Yavin" .
+  
+  <https://swapi.co/resource/starship/5> skos:altLabel "Sentinel landing craft", "Sentinel-class shuttle",
+      "Sentinel shuttle" .
+  
+  <https://swapi.co/resource/starship/11> skos:altLabel "Y-wing starfighter", "Y-bomber",
+      "Koensayr BTL" .
+  
+  <https://swapi.co/resource/starship/3> skos:altLabel "Star Cruiser", "Imperial Destroyer",
+      "Destroyer" .
+  
+  <https://swapi.co/resource/starship/13> skos:altLabel "TIE/x1", "Advanced TIE", "Vader's TIE" .
+  
+  <https://swapi.co/resource/starship/10> skos:altLabel "Falcon", "YT-1300", "Corellian freighter" .
+  
+  <https://swapi.co/resource/starship/2> skos:altLabel "Corellian Corvette", "Blockade Runner",
+      "Rebel Corvette" .
+  
+  <https://swapi.co/resource/starship/9> skos:altLabel "DS-1", "Imperial Battle Station",
+      "Planet Killer" .
+  
+  <https://swapi.co/resource/starship/12> skos:altLabel "X-wing starfighter", "T-65",
+      "Incom fighter" .
+  
+  <https://swapi.co/resource/vehicle/6> skos:altLabel "T-16", "Skyhopper", "T-16 airspeeder" .
+  
+  <https://swapi.co/resource/vehicle/8> skos:altLabel "TIE Fighter", "TIE/Line", "Imperial TIE" .
+  
+  <https://swapi.co/resource/vehicle/4> skos:altLabel "Sandcrawler", "Jawa Crawler",
+      "Desert Hauler" .
+  
+  <https://swapi.co/resource/vehicle/7> skos:altLabel "speeder", "X-34", "landspeeder" .
+  
+  <https://swapi.co/resource/human/25> skos:altLabel "Lando", "Baron Calrissian", "Calrissian" .
+  
+  <https://swapi.co/resource/human/22> skos:altLabel "Fett", "The Bounty Hunter", "Clone Son" .
+  
+  <https://swapi.co/resource/human/26> skos:altLabel "Lando's Aide", "Cloud City Administrator",
+      "Cyborg Aide" .
+  
+  <https://swapi.co/resource/yodasspecies/20> skos:altLabel "Master Yoda", "Grand Master Yoda",
+      "Jedi Master Yoda" .
+  
+  <https://swapi.co/resource/human/21> skos:altLabel "Darth Sidious", "Emperor Palpatine",
+      "The Emperor" .
+  
+  <https://swapi.co/resource/trandoshan/24> skos:altLabel "Bossk the Bounty Hunter",
+      "Trandoshan Hunter", "Bossk'k" .
+  
+  <https://swapi.co/resource/planet/5> skos:altLabel "Dagobah System", "Swamp Planet",
+      "Yoda's Refuge" .
+  
+  <https://swapi.co/resource/planet/4> skos:altLabel "Ice Planet Hoth", "Hoth System",
+      "The Frozen World" .
+  
+  <https://swapi.co/resource/planet/27> skos:altLabel "Ord Mantel", "Mantell", "The Junkyard Planet" .
+  
+  <https://swapi.co/resource/planet/6> skos:altLabel "Cloud City", "Bespin System",
+      "Gas Giant" .
+  
+  <https://swapi.co/resource/starship/23> skos:altLabel "Nebulon-B frigate", "EF76 frigate",
+      "Nebulon-B" .
+  
+  <https://swapi.co/resource/starship/21> skos:altLabel "Slave I", "Firespray-31", "Boba Fett's ship" .
+  
+  <https://swapi.co/resource/starship/17> skos:altLabel "Rebel freighter", "Alliance transport",
+      "GR-75 transport" .
+  
+  <https://swapi.co/resource/starship/15> skos:altLabel "Executor-class Star Dreadnought",
+      "Super Star Destroyer", "Vader's flagship" .
+  
+  <https://swapi.co/resource/starship/22> skos:altLabel "Lambda-class shuttle", "Imperial transport",
+      "Lambda shuttle" .
+  
+  <https://swapi.co/resource/vehicle/19> skos:altLabel "Scout Walker", "Chicken Walker",
+      "ATST" .
+  
+  <https://swapi.co/resource/vehicle/14> skos:altLabel "Airspeeder", "T-47", "Rebel Snowspeeder" .
+  
+  <https://swapi.co/resource/vehicle/16> skos:altLabel "TIE/sa", "Imperial bomber",
+      "Twin Ion Engine bomber" .
+  
+  <https://swapi.co/resource/vehicle/20> skos:altLabel "Cloud Car", "Twin-Pod Cloud Car",
+      "Storm IV Cloud Car" .
+  
+  <https://swapi.co/resource/vehicle/18> skos:altLabel "All Terrain Armored Transport",
+      "Imperial Walker", "Walker" .
+  
+  <https://swapi.co/resource/moncalamari/27> skos:altLabel "Admiral Ackbar", "Gial Ackbar" .
+  
+  <https://swapi.co/resource/human/28> skos:altLabel "Mothma", "Chancellor Mothma",
+      "Senator Mothma" .
+  
+  <https://swapi.co/resource/twilek/45> skos:altLabel "Fortuna", "Bib", "Bibbo" .
+  
+  <https://swapi.co/resource/human/29> skos:altLabel "Arvel", "Crynyd", "Green Leader" .
+  
+  <https://swapi.co/resource/sullustan/31> skos:altLabel "Nunb", "Nien", "Captain Nunb" .
+  
+  <https://swapi.co/resource/planet/9> skos:altLabel "Galactic City", "Imperial Center",
+      "The Core" .
+  
+  <https://swapi.co/resource/starship/27> skos:altLabel "Mon Calamari Cruiser", "Mon Cal Cruiser",
+      "MC Cruiser" .
+  
+  <https://swapi.co/resource/starship/28> skos:altLabel "RZ-1", "A-wing starfighter",
+      "RZ-1 interceptor" .
+  
+  <https://swapi.co/resource/starship/29> skos:altLabel "B-wing starfighter", "B-series starfighter",
+      "Blade-wing" .
+  
+  <https://swapi.co/resource/vehicle/30> skos:altLabel "Speeder Bike", "Imperial Bike",
+      "74-Z Speeder" .
+  
+  <https://swapi.co/resource/vehicle/26> skos:altLabel "TIE Interceptor", "TIE/In",
+      "Interceptor" .
+  
+  <https://swapi.co/resource/vehicle/24> skos:altLabel "Sailbarge", "Desert barge",
+      "Pleasure barge" .
+  
+  <https://swapi.co/resource/vehicle/25> skos:altLabel "Bantha-II skiff", "Cargo skiff",
+      "Bantha skiff" .
+  
+  <https://swapi.co/resource/iktotchi/56> skos:altLabel "Master Tiin", "Saesee", "Tiin" .
+  
+  <https://swapi.co/resource/quermian/57> skos:altLabel "Master Poof", "Y. Poof", "Poof" .
+  
+  <https://swapi.co/resource/human/43> skos:altLabel "Shmi", "Skywalker Matriarch",
+      "Anakin's Mother" .
+  
+  <https://swapi.co/resource/human/34> skos:altLabel "Chancellor Valorum", "Valorum",
+      "Supreme Chancellor" .
+  
+  <https://swapi.co/resource/human/39> skos:altLabel "Captain Olié", "Ric", "Bravo Leader" .
+  
+  <https://swapi.co/resource/toong/50> skos:altLabel "Ben Q.", "Quadinaros", "Benny Quad" .
+  
+  <https://swapi.co/resource/xexto/49> skos:altLabel "Gas", "Gasgo", "Gasgano the Podracer" .
+  
+  <https://swapi.co/resource/human/35> skos:altLabel "Padmé", "Queen Amidala", "Senator Amidala" .
+  
+  <https://swapi.co/resource/human/11> skos:altLabel "Darth Vader", "Ani", "Skywalker" .
+  
+  <https://swapi.co/resource/tholothian/55> skos:altLabel "Master Gallia", "Gallia",
+      "Jedi Gallia" .
+  
+  <https://swapi.co/resource/vulptereen/48> skos:altLabel "Dud", "Bolt", "Dud-B" .
+  
+  <https://swapi.co/resource/gungan/38> skos:altLabel "Boss Nass", "Nass", "Rugor" .
+  
+  <https://swapi.co/resource/neimodian/33> skos:altLabel "Viceroy Gunray", "Gunray",
+      "N. Gunray" .
+  
+  <https://swapi.co/resource/human/32> skos:altLabel "Qui-Gon", "Master Jinn", "Jinn" .
+  
+  <https://swapi.co/resource/gungan/37> skos:altLabel "Captain Tarpals", "Tarpals",
+      "Roos" .
+  
+  <https://swapi.co/resource/nautolan/53> skos:altLabel "Master Fisto", "Fisto", "Kit" .
+  
+  <https://swapi.co/resource/keldor/58> skos:altLabel "Master Plo", "Jedi Plo Koon",
+      "Koon" .
+  
+  <https://swapi.co/resource/twilek/46> skos:altLabel "Aayla", "Secura", "Jedi Secura" .
+  
+  <https://swapi.co/resource/human/51> skos:altLabel "Master Windu", "Windu", "Mace" .
+  
+  <https://swapi.co/resource/zabrak/44> skos:altLabel "Maul", "Lord Maul", "The Zabrak Sith" .
+  
+  <https://swapi.co/resource/gungan/36> skos:altLabel "Gungan", "Jar Jar", "Binks" .
+  
+  <https://swapi.co/resource/toydarian/40> skos:altLabel "Toydarian Junk Dealer", "Watto the Trader",
+      "Junkyard Owner" .
+  
+  <https://swapi.co/resource/human/42> skos:altLabel "Captain Panaka", "Panaka", "Quarsh" .
+  
+  <https://swapi.co/resource/zabrak/54> skos:altLabel "Master Koth", "E. Koth", "Koth" .
+  
+  <https://swapi.co/resource/starship/39> skos:altLabel "N-1 starfighter", "Naboo starfighter",
+      "N-1" .
+  
+  <https://swapi.co/resource/starship/41> skos:altLabel "Sith Infiltrator", "Scimitar-class",
+      "Infiltrator" .
+  
+  <https://swapi.co/resource/starship/31> skos:altLabel "Consular-class cruiser", "Diplomatic cruiser",
+      "Republic Consular" .
+  
+  <https://swapi.co/resource/starship/32> skos:altLabel "Droid command ship", "Control ship",
+      "Droid battleship" .
+  
+  <https://swapi.co/resource/starship/40> skos:altLabel "Naboo Starship", "Royal Starship",
+      "Naboo Cruiser" .
+  
+  <https://swapi.co/resource/vehicle/35> skos:altLabel "AAT", "Assault Tank", "Trade Federation Tank" .
+  
+  <https://swapi.co/resource/vehicle/33> skos:altLabel "Vulture droid starfighter",
+      "Vulture starfighter", "Variable Geometry Self-Propelled Battle Droid" .
+  
+  <https://swapi.co/resource/vehicle/38> skos:altLabel "Bongo sub", "Tribubble", "Gungan sub" .
+  
+  <https://swapi.co/resource/vehicle/34> skos:altLabel "MTT", "Troop Transport", "Droid Transport" .
+  
+  <https://swapi.co/resource/vehicle/36> skos:altLabel "STAP", "Aerial Platform", "Trooper Platform" .
+  
+  <https://swapi.co/resource/vehicle/42> skos:altLabel "Sith bike", "Sith swoop", "Dark Side speeder" .
+  
+  <https://swapi.co/resource/vehicle/37> skos:altLabel "C-9979 transport", "Trade Federation landing craft",
+      "Droid landing craft" .
+  
+  <https://swapi.co/resource/muun/77> skos:altLabel "Chairman Hill", "San", "Hill" .
+  
+  <https://swapi.co/resource/human/62> skos:altLabel "Lars", "Cliegg", "Farmer Lars" .
+  
+  <https://swapi.co/resource/human/68> skos:altLabel "Bail Organa", "Senator Organa",
+      "Viceroy Organa" .
+  
+  <https://swapi.co/resource/geonosian/63> skos:altLabel "Archduke Poggle", "Poggle",
+      "Geonosian Archduke" .
+  
+  <https://swapi.co/resource/togruta/78> skos:altLabel "Master Shaak", "Ti", "Jedi Shaak" .
+  
+  <https://swapi.co/resource/human/69> skos:altLabel "Fett", "J. Fett", "Bounty Hunter" .
+  
+  <https://swapi.co/resource/skakoan/76> skos:altLabel "Tambor", "Foreman Tambor", "Techno Union Foreman" .
+  
+  <https://swapi.co/resource/kaminoan/73> skos:altLabel "Taun-We", "Taun", "Kaminoan Administrator" .
+  
+  <https://swapi.co/resource/mirialan/64> skos:altLabel "Master Luminara", "Unduli",
+      "Jedi Luminara" .
+  
+  <https://swapi.co/resource/umbaran/82> skos:altLabel "The Umbaran", "Sly", "Palpatine's Aide" .
+  
+  <https://swapi.co/resource/mirialan/65> skos:altLabel "Barriss", "Offee", "Jedi Barriss" .
+  
+  <https://swapi.co/resource/human/60> skos:altLabel "Captain Typho", "Typho", "Greg Typho" .
+  
+  <https://swapi.co/resource/human/66> skos:altLabel "Dorme", "Handmaiden Dormé", "Senator's Handmaiden" .
+  
+  <https://swapi.co/resource/kaminoan/72> skos:altLabel "Prime Minister Lama Su", "Lama-Su",
+      "Su" .
+  
+  <https://swapi.co/resource/human/61> skos:altLabel "Corde", "Handmaiden Cordé", "Padmé's decoy" .
+  
+  <https://swapi.co/resource/human/67> skos:altLabel "Count Dooku", "Darth Tyranus",
+      "Lord Tyranus" .
+  
+  <https://swapi.co/resource/human/74> skos:altLabel "Madame Nu", "Chief Librarian",
+      "Jocasta" .
+  
+  <https://swapi.co/resource/planet/11> skos:altLabel "Geonosia", "Geonosian Homeworld",
+      "Geonos Prime" .
+  
+  <https://swapi.co/resource/planet/10> skos:altLabel "Kaminoan Homeworld", "Water Planet",
+      "Tipoca World" .
+  
+  <https://swapi.co/resource/starship/47> skos:altLabel "AA-9 freighter", "Coruscant freighter",
+      "AA-9 transport" .
+  
+  <https://swapi.co/resource/starship/52> skos:altLabel "Acclamator-class", "Republic troopship",
+      "Assault transport" .
+  
+  <https://swapi.co/resource/starship/48> skos:altLabel "Jedi interceptor", "Jedi fighter",
+      "Delta-7" .
+  
+  <https://swapi.co/resource/starship/43> skos:altLabel "Diplomatic barge", "J-type barge",
+      "Naboo diplomatic barge" .
+  
+  <https://swapi.co/resource/starship/49> skos:altLabel "H-type yacht", "Nubian yacht",
+      "Royal Nubian yacht" .
+  
+  <https://swapi.co/resource/starship/58> skos:altLabel "Solar Yacht", "Sailer", "Solar Ship" .
+  
+  <https://swapi.co/resource/vehicle/44> skos:altLabel "Zephyr-G bike", "Zephyr swoop",
+      "Zephyr-G" .
+  
+  <https://swapi.co/resource/vehicle/53> skos:altLabel "All Terrain Tactical Enforcer",
+      "ATTE", "Clone Walker" .
+  
+  <https://swapi.co/resource/vehicle/51> skos:altLabel "LAAT Carrier", "LAAT-c", "Republic Dropship" .
+  
+  <https://swapi.co/resource/vehicle/56> skos:altLabel "Neimoidian transport", "Neimoidian craft",
+      "Neimoidian starship" .
+  
+  <https://swapi.co/resource/vehicle/57> skos:altLabel "Geonosian fighter", "Geonosian ship",
+      "Geonosian craft" .
+  
+  <https://swapi.co/resource/vehicle/54> skos:altLabel "Self-Propelled Heavy Artillery",
+      "SPHA-T", "Heavy Artillery Walker" .
+  
+  <https://swapi.co/resource/vehicle/50> skos:altLabel "LAAT", "Republic Gunship", "Low Altitude Assault Transport" .
+  
+  <https://swapi.co/resource/vehicle/55> skos:altLabel "Flitknot", "Flitknot bike",
+      "Flitknot swoop" .
+  
+  <https://swapi.co/resource/vehicle/46> skos:altLabel "XJ-6 speeder", "XJ-6", "XJ-6 aircar" .
+  
+  <https://swapi.co/resource/pauan/83> skos:altLabel "Administrator Medon", "Port Administrator",
+      "Medon" .
+  
+  <https://swapi.co/resource/wookiee/80> skos:altLabel "Chief Tarfful", "Tarfful the Wookiee",
+      "Tarff" .
+  
+  <https://swapi.co/resource/kaleesh/79> skos:altLabel "General Grievous", "The Droid General" .
+  
+  <https://swapi.co/resource/planet/16> skos:altLabel "Mygeetan", "Mygeeto City", "Mygeeto Prime" .
+  
+  <https://swapi.co/resource/planet/19> skos:altLabel "Saleucami Prime", "Saleu", "Saleucami System" .
+  
+  <https://swapi.co/resource/planet/15> skos:altLabel "Polis Massan Outpost", "Polis Massa Base",
+      "Asteroid Base Polis Massa" .
+  
+  <https://swapi.co/resource/planet/13> skos:altLabel "Mustafar System", "Lava Planet",
+      "Musta" .
+  
+  <https://swapi.co/resource/planet/18> skos:altLabel "Neimoidia", "Cato", "Trade Federation World" .
+  
+  <https://swapi.co/resource/planet/14> skos:altLabel "Wookiee Homeworld", "Kashyk",
+      "Wookiee Planet" .
+  
+  <https://swapi.co/resource/planet/17> skos:altLabel "Felucian Jungle", "Felucian Wilds",
+      "Felucia Prime" .
+  
+  <https://swapi.co/resource/planet/12> skos:altLabel "Pau City", "Utapauan", "Pau" .
+  
+  <https://swapi.co/resource/starship/74> skos:altLabel "Belbullab-22", "Belbullab starfighter",
+      "B-22 starfighter" .
+  
+  <https://swapi.co/resource/starship/68> skos:altLabel "Banking Clan warship", "Munificent-class frigate",
+      "IGBC frigate" .
+  
+  <https://swapi.co/resource/starship/65> skos:altLabel "Eta-2 Actis", "Jedi Starfighter",
+      "Actis Interceptor" .
+  
+  <https://swapi.co/resource/starship/61> skos:altLabel "Theta-class shuttle", "T-2c shuttle",
+      "Theta shuttle" .
+  
+  <https://swapi.co/resource/starship/66> skos:altLabel "ARC-170 starfighter", "ARC fighter",
+      "Aggressive ReCon-170" .
+  
+  <https://swapi.co/resource/starship/63> skos:altLabel "Venator-class Star Destroyer",
+      "Venator", "Republic cruiser" .
+  
+  <https://swapi.co/resource/starship/64> skos:altLabel "Naboo skiff", "Star skiff",
+      "Naboo starship" .
+  
+  <https://swapi.co/resource/starship/59> skos:altLabel "Trade Federation battleship",
+      "Federation cruiser", "Lucrehulk-class cruiser" .
+  
+  <https://swapi.co/resource/starship/75> skos:altLabel "V-wing starfighter", "Alpha-3 Nimbus",
+      "Nimbus V-wing" .
+  
+  <https://swapi.co/resource/vehicle/70> skos:altLabel "Gnasp fluttercraft", "Raddaugh fluttercraft",
+      "Fluttercraft" .
+  
+  <https://swapi.co/resource/vehicle/76> skos:altLabel "All Terrain Recon Transport",
+      "AT-RT Walker", "Recon Walker" .
+  
+  <https://swapi.co/resource/vehicle/60> skos:altLabel "Wheel Bike", "Tsmeu-6 Wheel",
+      "Grievous' Wheel Bike" .
+  
+  <https://swapi.co/resource/vehicle/67> skos:altLabel "Tri-fighter", "Tri-droid", "Droid fighter" .
+  
+  <https://swapi.co/resource/vehicle/72> skos:altLabel "Corporate Alliance Droid Tank",
+      "NR-N99 tank droid", "Snail tank" .
+  
+  <https://swapi.co/resource/vehicle/71> skos:altLabel "Juggernaut", "HAVw A6", "Turbo Tank" .
+  
+  <https://swapi.co/resource/vehicle/62> skos:altLabel "Firespeeder", "Emergency Speeder",
+      "Fire Response Speeder" .
+  
+  <https://swapi.co/resource/vehicle/69> skos:altLabel "Oevvaor catamaran", "Jet catamaran",
+      "Wookiee catamaran" .
+  
+  <https://swapi.co/resource/vehicle/73> skos:altLabel "Gunship droid", "Separatist gunship",
+      "HMP gunship" .
+  
+  <https://swapi.co/resource/human/85> skos:altLabel "Rey Skywalker", "Scavenger Rey",
+      "The Last Jedi" .
+  
+  <https://swapi.co/resource/human/88> skos:altLabel "Phasma", "Captain P", "Chrome Dome" .
+  
+  <https://swapi.co/resource/human/86> skos:altLabel "Poe", "Dameron", "Black Leader" .
+  
+  <https://swapi.co/resource/human/84> skos:altLabel "FN-2187", "Finn the Stormtrooper",
+      "Rebel Finn" .
+  
+  <https://swapi.co/resource/planet/61> skos:altLabel "Jakku Desert", "Jakku Planet",
+      "The Wastes" .
+  
+  <https://swapi.co/resource/starship/77> skos:altLabel "T-70 X-wing", "T-70 starfighter",
+      "X-wing fighter" .
+  
+  voc:Geonosian skos:altLabel "Geonosianer", "Geono", "Geonosian native" .
+  
+  voc:Gungan skos:altLabel "Gungans", "Gunganese", "Gung" .
+  
+  voc:Human skos:altLabel "Humans", "Humanoid", "Terran" .
+  
+  <https://swapi.co/resource/planet/20> skos:altLabel "Stewjon Prime", "Stewjon System",
+      "Stewjonian" .
+  
+  <https://swapi.co/resource/planet/21> skos:altLabel "Eriadu City", "Outer Rim Capital",
+      "Eriadu System" .
+  
+  <https://swapi.co/resource/planet/22> skos:altLabel "Corell", "Corellian Sector",
+      "Corellian" .
+  
+  <https://swapi.co/resource/planet/26> skos:altLabel "Bestine", "Bestine Four", "Bestine 4" .
+  
+  <https://swapi.co/resource/planet/30> skos:altLabel "Socorro System", "Socorran",
+      "Socorro Planet" .
+  
+  <https://swapi.co/resource/planet/32> skos:altLabel "Chandrilan Homeworld", "Chandrila Prime",
+      "The Core World" .
+  
+  <https://swapi.co/resource/planet/42> skos:altLabel "Jungle Planet", "Home of the Korunnai",
+      "Haruun" .
+  
+  <https://swapi.co/resource/planet/52> skos:altLabel "Planet Serenno", "Serenno System",
+      "House Serenno" .
+  
+  <https://swapi.co/resource/planet/53> skos:altLabel "Concord", "Dawn", "Concordian" .
+  
+  voc:Hutt skos:altLabel "Huttese", "Hutt Clan", "Hutt Cartel" .
+  
+  <https://swapi.co/resource/planet/24> skos:altLabel "Hutta", "The Glorious Jewel",
+      "Hutt Homeworld" .
+  
+  voc:Iktotchi skos:altLabel "Iktotchan", "Iktotchians", "Iktotchi people" .
+  
+  <https://swapi.co/resource/planet/47> skos:altLabel "Iktotchi", "Iktotchan", "Iktotchs" .
+  
+  voc:Kaleesh skos:altLabel "Kaleeshan", "Kalee native", "Kalee warrior" .
+  
+  <https://swapi.co/resource/planet/59> skos:altLabel "Kale", "Kalee Homeworld", "Kaleean Planet" .
+  
+  voc:Kaminoan skos:altLabel "Kaminoan Cloner", "Kamino Native", "Kaminoan Scientist" .
+  
+  voc:Keldor skos:altLabel "Kel Dor", "Keldorian", "Kel-Dor" .
+  
+  <https://swapi.co/resource/planet/49> skos:altLabel "Dorin System", "Dorinian", "Dorin Sector" .
+  
+  voc:Mirialan skos:altLabel "Mirial", "Mirialanian", "Mirialite" .
+  
+  <https://swapi.co/resource/planet/51> skos:altLabel "Mirialan Homeworld", "Planet Mirial",
+      "Mirialia" .
+  
+  voc:Moncalamari skos:altLabel "Mon Cala", "Mon Calamari", "Mon Cal" .
+  
+  <https://swapi.co/resource/planet/31> skos:altLabel "Mon Calamari", "Mon Cal", "Dac" .
+  
+  voc:Muun skos:altLabel "Muunlin", "Muunite", "Muunian" .
+  
+  <https://swapi.co/resource/planet/57> skos:altLabel "Muunilist", "Muun Homeworld",
+      "Banking Clan World" .
+  
+  voc:Nautolan skos:altLabel "Nautolans", "Nautolanian", "Nautol" .
+  
+  <https://swapi.co/resource/planet/44> skos:altLabel "Glee", "Anselm", "Glee-Anselm" .
+  
+  voc:Neimodian skos:altLabel "Neimoidian", "Neimodians", "Nemoidian" .
+  
+  voc:Pauan skos:altLabel "Utapaun", "Pau City native", "Pau'an" .
+  
+  <https://swapi.co/resource/planet/23> skos:altLabel "Rodian Homeworld", "Rodia Prime",
+      "Rodian Planet" .
+  
+  <https://swapi.co/resource/planet/25> skos:altLabel "Dantoo", "Dantooine System",
+      "Dantooine Colony" .
+  
+  <https://swapi.co/resource/planet/29> skos:altLabel "Trandoshan Homeworld", "Dosha",
+      "Trandosh" .
+  
+  <https://swapi.co/resource/planet/33> skos:altLabel "Sullustan Homeworld", "Sullust System",
+      "Sull" .
+  
+  <https://swapi.co/resource/planet/34> skos:altLabel "Toydarian Homeworld", "Planet Toydaria",
+      "Toydarian World" .
+  
+  <https://swapi.co/resource/planet/36> skos:altLabel "The Witch Planet", "Nightsister World",
+      "Dath" .
+  
+  <https://swapi.co/resource/planet/37> skos:altLabel "The Twi'lek Homeworld", "Ryl",
+      "Ryloth Prime" .
+  
+  <https://swapi.co/resource/planet/39> skos:altLabel "Vulpteran", "Vulpter Prime",
+      "Vulp" .
+  
+  <https://swapi.co/resource/planet/40> skos:altLabel "Troiken Prime", "Troik", "Troiken System" .
+  
+  <https://swapi.co/resource/planet/41> skos:altLabel "Tund System", "Tund World", "Planet Tund" .
+  
+  <https://swapi.co/resource/planet/45> skos:altLabel "Iridonian Homeworld", "Iridon",
+      "Zabrak Planet" .
+  
+  <https://swapi.co/resource/planet/46> skos:altLabel "Tholothian", "Tholoth Tribe",
+      "Tholoth People" .
+  
+  <https://swapi.co/resource/planet/48> skos:altLabel "Quermian Homeworld", "Quermian Planet",
+      "Quermian System" .
+  
+  <https://swapi.co/resource/planet/56> skos:altLabel "Skakoan", "Skako Minor", "Skako System" .
+  
+  <https://swapi.co/resource/planet/58> skos:altLabel "Shili Prime", "Shili System",
+      "Shili Homeworld" .
+  
+  <https://swapi.co/resource/planet/60> skos:altLabel "The Shadow World", "Umbara Prime",
+      "Umbaran Planet" .
+  
+  voc:Quermian skos:altLabel "Quermianian", "Quermite", "Querm" .
+  
+  voc:Rodian skos:altLabel "Rodia native", "Rodianite", "Rodianian" .
+  
+  voc:Skakoan skos:altLabel "Skakoanite", "Skakoan Being", "Skakoan Native" .
+  
+  voc:Sullustan skos:altLabel "Sullustian", "Sullust native", "Sullustianer" .
+  
+  voc:Tholothian skos:altLabel "Tholoth", "Tholothian native", "Tholothian people" .
+  
+  voc:Togruta skos:altLabel "Togrutans", "Togrutai", "Togrut" .
+  
+  voc:Toong skos:altLabel "Toongian", "Toongite", "Toong species" .
+  
+  voc:Toydarian skos:altLabel "Toydari", "Toydarianer", "Toyd" .
+  
+  voc:Trandoshan skos:altLabel "Trandoshan Hunter", "Trandosh", "Trando" .
+  
+  voc:Twilek skos:altLabel "Twi'lek", "Twi Lek", "Lek" .
+  
+  voc:Umbaran skos:altLabel "Shadow People", "Umbarans", "Umbara natives" .
+  
+  voc:Vulptereen skos:altLabel "Vulpter", "Vulpterian", "Vulptereenian" .
+  
+  voc:Wookiee skos:altLabel "Wookie", "Wookiees", "Kashyyykian" .
+  
+  voc:Xexto skos:altLabel "Xextan", "Xextos", "Xextoid" .
+  
+  voc:Yodasspecies skos:altLabel "Yoda's species", "Yoda's race", "Yoda's kind" .
+  
+  voc:Zabrak skos:altLabel "Zabraki", "Iridonian", "Zabrakian" .
+}

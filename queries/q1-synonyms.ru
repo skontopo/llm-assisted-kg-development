@@ -6,7 +6,7 @@ PREFIX ex: <http://www.example.com/>
 
 # Query 1 - Alias enrichment
 INSERT {
-    GRAPH ex:llm-outputs-q1 {
+    GRAPH ex:q1-synonyms-output {
         ?entity skos:altLabel ?alias .
     }
 }

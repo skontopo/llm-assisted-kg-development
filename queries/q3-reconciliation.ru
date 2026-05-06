@@ -8,7 +8,7 @@ PREFIX ex: <http://www.example.com/>
 
 # Query 3 - Cross-graph entity reconciliation
 INSERT {
-    GRAPH ex:llm-outputs-q3 {
+    GRAPH ex:q3-reconciliation-output {
         ?source voc:wikidataLink ?match .
         << ?source voc:wikidataLink ?match >> ex:reason ?reason .
     }
