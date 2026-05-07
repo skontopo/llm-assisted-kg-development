@@ -1,4 +1,4 @@
-# LLM-assisted KG Development
+# LLM-assisted Knowledge Graph Development
 Practical examples and resources for using LLMs as human-guided assistants in knowledge graph enrichment, semantic linking, and entity reconciliation.
 
 
