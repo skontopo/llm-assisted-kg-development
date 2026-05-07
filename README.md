@@ -1,4 +1,4 @@
-# llm-assisted-kg-development
+# LLM-assisted KG Development
 Practical examples and resources for using LLMs as human-guided assistants in knowledge graph enrichment, semantic linking, and entity reconciliation.
 
 
@@ -8,9 +8,9 @@ This repository accompanies the article **“Building Knowledge Graphs with an A
 
 The goal is to show how an LLM can support a Knowledge Graph engineer during KG development, without replacing the human expert. The examples use [Graphwise GraphDB](https://graphwise.ai/components/graphdb/) and its [GPT/SPARQL integration](https://graphdb.ontotext.com/documentation/11.3/gpt-queries.html) to demonstrate three small but practical workflows:
 
-1. adding alternative labels to existing entities;
-2. enriching entities with controlled semantic categories;
-3. reconciling a local KG entity with candidate Wikidata entities.
+1. Adding alternative labels to existing entities;
+2. Enriching entities with controlled semantic categories;
+3. Reconciling a local KG entity with candidate Wikidata entities.
 
 The main idea is simple: the LLM proposes, but the human validates and commits.
 
