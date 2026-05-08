@@ -45,10 +45,10 @@ The examples in this repository are designed to be run on a local GraphDB instan
 2. Configure LLM access by providing an API key in the GraphDB configuration.
 3. Create a local repository in GraphDB.
 4. Load the [input data](data). The Star Wars dataset can be loaded into the default graph, while the Wikidata slice should be loaded into a named graph, e.g. `wikidata-slice`. Make sure this graph IRI matches the graph IRI used in `q3-reconciliation.ru`.
-5. Running the examples: Run the SPARQL queries in the [queries](queries) folder. Each query writes its results into a separate named graph.
+5. Run the SPARQL queries in the [queries](queries) folder. Each query writes its results into a separate named graph. Feel free to experiment with different prompts and parameters, like, e.g., the count of results retrieved by the LLM or the temperature used for sampling.
 
 > [!CAUTION]
-> The exact LLM output may vary slightly, because LLMs are not fully deterministic. The queries use low temperature to reduce variation, but human review is still expected.
+> The exact LLM output may vary slightly because LLMs are not fully deterministic. The queries use low temperature to reduce variation, but human review is still expected.
 
 
 ## Important Note
