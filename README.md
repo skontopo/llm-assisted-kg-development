@@ -4,7 +4,7 @@ Practical examples and resources for using LLMs as human-guided assistants in kn
 
 ## About
 
-This repository accompanies the article **“Building Knowledge Graphs with an AI Wingman”**. [TODO: Add link to article]
+This repository accompanies the article **"Building Knowledge Graphs with an AI Wingman"**. [TODO: Add link to article]
 
 The goal is to show how an LLM can support a Knowledge Graph engineer during KG development, without replacing the human expert. The examples use [Graphwise GraphDB](https://graphwise.ai/components/graphdb/) and its [GPT/SPARQL integration](https://graphdb.ontotext.com/documentation/11.3/gpt-queries.html) to demonstrate three small but practical workflows:
 
@@ -12,7 +12,7 @@ The goal is to show how an LLM can support a Knowledge Graph engineer during KG 
 2. Enriching entities with controlled semantic categories;
 3. Reconciling a local KG entity with candidate Wikidata entities.
 
-The main idea is simple: the LLM proposes, but the human validates and commits.
+The main idea is straightforward: The LLM proposes, but the human validates and commits.
 
 
 ## Data
@@ -20,7 +20,7 @@ The main idea is simple: the LLM proposes, but the human validates and commits.
 The `data/` folder contains the input data used by the examples.
 
 - `starwars-data.ttl`: This is the main Star Wars RDF Knowledge Graph. It contains entities such as characters, species, films, planets, starships, and vehicles. Downloaded from [here](https://www.ontotext.com/blog/the-rise-of-the-knowledge-graph/). 
-- `wikidata-slice.ttl`: This is a small local Wikidata slice with selected Star Wars-related entities. It is used in the [reconciliation example](queries/q3-reconciliation.ru), where the LLM chooses the best Wikidata match for a local KG entity. The slice intentionally contains similar or related entities, so that the LLM needs to disambiguate between them.
+- `wikidata-slice.ttl`: This is a small local Wikidata slice with selected Star Wars-related entities. It is used in the [reconciliation example](queries/q3-reconciliation.ru), where the LLM chooses the best Wikidata match for a local KG entity. The slice intentionally contains similar or related entities, so that the LLM needs to disambiguate between them. The slice can be created using [this script](download-wikidata-slice.sh).
 
 
 ## Queries
