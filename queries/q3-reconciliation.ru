@@ -63,8 +63,7 @@ WHERE {
                   "We are reconciling a Star Wars knowledge graph entity with Wikidata. ",
                   "The local entity label is: ", STR(?sourceLabel), ". ",
                   "Candidate rows are given as: Wikidata IRI, label, description. ",
-                  "Choose the best candidate only if it clearly refers to the same fictional character. ",
-                  "Do not choose related objects, costumes, merchandise, or different characters. ",
+                  "Choose the best candidate only if it clearly refers to the same entity. ",
                   "Return exactly one row with 3 columns: Wikidata IRI, label, short reason. ",
                   "If none is a good match, return: NONE, NONE, no-match."
               ) AS ?prompt
