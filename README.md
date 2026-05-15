@@ -34,7 +34,13 @@ The `queries/` folder contains three SPARQL Update queries.
 
 ## Output
 
-The `output/` folder contains exported named graphs produced by the three queries. The files use the `.trigs` extension because the outputs contain named graph data and RDF-star triples.
+The `output/` folder contains exported named graphs produced by the three queries:
+
+- Query 1 should create `skos:altLabel` suggestions.
+- Query 2 should assign film themes and reasons.
+- Query 3 should link local Princess Leia to `wd:Q51797`.
+
+The files use the `.trigs` extension because the outputs contain named graph data and RDF-star triples.
 
 
 ## Setup
@@ -44,7 +50,7 @@ The examples in this repository are designed to be run on a local GraphDB instan
 1. Install Graphwise GraphDB locally.
 2. Configure LLM access by providing an API key in the GraphDB configuration.
 3. Create a local repository in GraphDB.
-4. Load the [input data](data). The Star Wars dataset can be loaded into the default graph, while the Wikidata slice should be loaded into a named graph, e.g. `wikidata-slice`. Make sure this graph IRI matches the graph IRI used in `q3-reconciliation.ru`.
+4. Load the [input data](data). The Star Wars dataset can be loaded into the default graph, while the Wikidata slice should be loaded into a named graph, e.g. `ex:wikidata-slice`. Make sure this graph IRI matches the graph IRI used in `q3-reconciliation.ru`.
 5. Run the SPARQL queries in the [queries](queries) folder. Each query writes its results into a separate named graph. Feel free to experiment with different prompts and parameters, like, e.g., the count of results retrieved by the LLM or the temperature used for sampling.
 
 > [!CAUTION]
@@ -53,11 +59,14 @@ The examples in this repository are designed to be run on a local GraphDB instan
 
 ## Important Note
 
-The results produced by the LLM should be treated as suggestions, not as final truth.
+This repository demonstrates a human-in-the-loop pattern: `KG data → LLM suggestion → human review → accepted KG enrichment`. Thus, the results produced by the LLM should be treated as suggestions, not as final truth. This is especially important for semantic enrichment and entity reconciliation, where a wrong link can introduce misleading knowledge into the graph.
 
-This repository demonstrates a human-in-the-loop pattern: `KG data → LLM suggestion → human review → accepted KG enrichment`.
+For the specific KG in this repository, the following checklist should be considered:
+- Check aliases for hallucinated or overly broad labels.
+- Check semantic themes against the controlled vocabulary.
+- Check reconciliation links against labels, descriptions, and known identifiers.
+- Commit only reviewed triples.
 
-This is especially important for semantic enrichment and entity reconciliation, where a wrong link can introduce misleading knowledge into the graph.
 
 ## License
 

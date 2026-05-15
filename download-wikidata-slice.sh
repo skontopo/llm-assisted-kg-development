@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-OUTPUT_DIR="wikidata-slice"
+OUTPUT_DIR="data"
 OUTPUT_FILE="wikidata-slice.ttl"
 
 # Wikimedia asks automated clients to send a descriptive User-Agent.
