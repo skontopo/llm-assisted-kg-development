@@ -4,7 +4,7 @@ Practical examples and resources for using LLMs as human-guided assistants in kn
 
 ## About
 
-This repository accompanies the article **"Building Knowledge Graphs with an AI Wingman"**. [TODO: Add link to article]
+This repository accompanies the article "[Building Knowledge Graphs with an AI Wingman](https://www.get-ai-infused.com/p/building-knowledge-graphs-with-an-ai-wingman)".
 
 The goal is to show how an LLM can support a Knowledge Graph engineer during KG development, without replacing the human expert. The examples use [Graphwise GraphDB](https://graphwise.ai/components/graphdb/) and its [GPT/SPARQL integration](https://graphdb.ontotext.com/documentation/11.3/gpt-queries.html) to demonstrate three small but practical workflows:
 
