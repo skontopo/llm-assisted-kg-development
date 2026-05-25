@@ -48,7 +48,7 @@ The files use the `.trigs` extension because the outputs contain named graph dat
 The examples in this repository are designed to be run on a local GraphDB instance.
 
 1. Install Graphwise GraphDB locally.
-2. Configure LLM access by providing an API key in the GraphDB configuration.
+2. Configure LLM access by providing an API key in [the GraphDB configuration](https://graphdb.ontotext.com/documentation/11.3/directories-and-config-properties.html#directories-and-config-properties-llm-properties).
 3. Create a local repository in GraphDB.
 4. Load the [input data](data). The Star Wars dataset can be loaded into the default graph, while the Wikidata slice should be loaded into a named graph, e.g. `ex:wikidata-slice`. Make sure this graph IRI matches the graph IRI used in `q3-reconciliation.ru`.
 5. Run the SPARQL queries in the [queries](queries) folder. Each query writes its results into a separate named graph. Feel free to experiment with different prompts and parameters, like, e.g., the count of results retrieved by the LLM or the temperature used for sampling.
