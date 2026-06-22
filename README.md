@@ -17,7 +17,7 @@ The main idea is straightforward: The LLM proposes, but the human validates and 
 
 ## Data
 
-The `data/` folder contains the input data used by the examples.
+The [data](data) folder contains the input data used by the examples.
 
 - `starwars-data.ttl`: This is the main Star Wars RDF Knowledge Graph. It contains entities such as characters, species, films, planets, starships, and vehicles. Downloaded from [here](https://www.ontotext.com/blog/the-rise-of-the-knowledge-graph/). 
 - `wikidata-slice.ttl`: This is a small local Wikidata slice with selected Star Wars-related entities. It is used in the [reconciliation example](queries/q3-reconciliation.ru), where the LLM chooses the best Wikidata match for a local KG entity. The slice intentionally contains similar or related entities, so that the LLM needs to disambiguate between them. The slice can be created using [this script](download-wikidata-slice.sh).
@@ -25,7 +25,7 @@ The `data/` folder contains the input data used by the examples.
 
 ## Queries
 
-The `queries/` folder contains three SPARQL Update queries.
+The [queries](queries) folder contains three SPARQL Update queries.
 
 1. [Query 1 - Lexical enrichment](queries/q1-synonyms.ru): This query asks the LLM to suggest alternative labels or aliases for existing entities in the Star Wars KG. The output is inserted into a separate named graph.
 2. [Query 2 - Controlled semantic enrichment](queries/q2-semantic-enrichment.ru): This query asks the LLM to classify Star Wars films into a small set of human-defined themes. The LLM does not invent arbitrary new concepts; instead, it chooses only from a controlled list of themes. This keeps the enrichment process more controlled and easier to review.
@@ -34,7 +34,7 @@ The `queries/` folder contains three SPARQL Update queries.
 
 ## Output
 
-The `output/` folder contains exported named graphs produced by the three queries:
+The [output](output) folder contains exported named graphs produced by the three queries:
 
 - Query 1 should create `skos:altLabel` suggestions.
 - Query 2 should assign film themes and reasons.
